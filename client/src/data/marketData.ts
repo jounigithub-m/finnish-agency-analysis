@@ -1,0 +1,246 @@
+export const marketOverview = {
+  year: 2024,
+  totalGrossProfit: 328,
+  gpChange: -2.4,
+  totalOperatingProfit: 29.4,
+  opChange: 10.7,
+  avgOperatingMargin: 7.0,
+  totalEmployees: 3133,
+  employeeChange: -185,
+  agenciesWithGrowth: 18,
+  agenciesWithDecline: 30,
+};
+
+export interface Agency {
+  rank: number;
+  name: string;
+  type: string;
+  grossProfit: number;
+  gpChange: number;
+  employees: number;
+  employeeChange: number;
+  operatingProfit: number;
+  gpPerEmployee: number;
+  opPerEmployee: number;
+  operatingMargin: number;
+}
+
+export const top10Agencies: Agency[] = [
+  {
+    rank: 1,
+    name: "Miltton Finland",
+    type: "PR/Content",
+    grossProfit: 27.2,
+    gpChange: 1,
+    employees: 265,
+    employeeChange: -24,
+    operatingProfit: 3606,
+    gpPerEmployee: 103,
+    opPerEmployee: 14,
+    operatingMargin: 13,
+  },
+  {
+    rank: 2,
+    name: "Dagmar",
+    type: "Media",
+    grossProfit: 21.2,
+    gpChange: 4,
+    employees: 214,
+    employeeChange: 14,
+    operatingProfit: 2375,
+    gpPerEmployee: 99,
+    opPerEmployee: 11,
+    operatingMargin: 11,
+  },
+  {
+    rank: 3,
+    name: "Tulos Helsinki",
+    type: "Technology",
+    grossProfit: 14.0,
+    gpChange: 53,
+    employees: 23,
+    employeeChange: -3,
+    operatingProfit: 5757,
+    gpPerEmployee: 607,
+    opPerEmployee: 250,
+    operatingMargin: 41,
+  },
+  {
+    rank: 4,
+    name: "Dentsu Finland",
+    type: "Advertising",
+    grossProfit: 13.8,
+    gpChange: 8,
+    employees: 112,
+    employeeChange: -3,
+    operatingProfit: 1054,
+    gpPerEmployee: 123,
+    opPerEmployee: 9,
+    operatingMargin: 8,
+  },
+  {
+    rank: 5,
+    name: "Avidly",
+    type: "Advertising",
+    grossProfit: 12.8,
+    gpChange: -9,
+    employees: 126,
+    employeeChange: -30,
+    operatingProfit: 102,
+    gpPerEmployee: 102,
+    opPerEmployee: 1,
+    operatingMargin: 1,
+  },
+  {
+    rank: 6,
+    name: "TBWA\\Helsinki",
+    type: "Advertising",
+    grossProfit: 12.5,
+    gpChange: 13,
+    employees: 105,
+    employeeChange: 6,
+    operatingProfit: 2401,
+    gpPerEmployee: 119,
+    opPerEmployee: 23,
+    operatingMargin: 19,
+  },
+  {
+    rank: 7,
+    name: "LIWLIG Finland",
+    type: "Events",
+    grossProfit: 12.2,
+    gpChange: -8,
+    employees: 109,
+    employeeChange: -11,
+    operatingProfit: 2157,
+    gpPerEmployee: 112,
+    opPerEmployee: 20,
+    operatingMargin: 18,
+  },
+  {
+    rank: 8,
+    name: "N2 Helsinki",
+    type: "Advertising",
+    grossProfit: 12.2,
+    gpChange: 30,
+    employees: 116,
+    employeeChange: 21,
+    operatingProfit: 185,
+    gpPerEmployee: 105,
+    opPerEmployee: 2,
+    operatingMargin: 2,
+  },
+  {
+    rank: 9,
+    name: "SEK",
+    type: "Advertising",
+    grossProfit: 11.7,
+    gpChange: -5,
+    employees: 121,
+    employeeChange: 6,
+    operatingProfit: 549,
+    gpPerEmployee: 96,
+    opPerEmployee: 5,
+    operatingMargin: 5,
+  },
+  {
+    rank: 10,
+    name: "WPP Media Finland",
+    type: "Media",
+    grossProfit: 10.7,
+    gpChange: 10,
+    employees: 90,
+    employeeChange: 3,
+    operatingProfit: -1463,
+    gpPerEmployee: 119,
+    opPerEmployee: -16,
+    operatingMargin: -14,
+  },
+];
+
+export const dentsuProjections = {
+  current: {
+    grossProfit: 13.8,
+    operatingMargin: 8,
+    employees: 112,
+    gpPerEmployee: 123,
+    opPerEmployee: 9,
+  },
+  year1: {
+    grossProfit: 16.5,
+    operatingMargin: 14,
+    employees: 100,
+    gpPerEmployee: 165,
+    opPerEmployee: 23,
+  },
+  year2: {
+    grossProfit: 20.0,
+    operatingMargin: 20,
+    employees: 95,
+    gpPerEmployee: 211,
+    opPerEmployee: 42,
+  },
+};
+
+export const mustWinBattles = [
+  {
+    id: 1,
+    title: "Operating Efficiency Transformation",
+    goal: "8% → 20% operating margin",
+    initiatives: [
+      "AI-Powered Service Delivery",
+      "Process Standardization & Automation",
+      "Organizational Restructuring",
+      "Vendor & Overhead Optimization",
+    ],
+    impact: "€3.2M margin improvement",
+  },
+  {
+    id: 2,
+    title: "Technology Differentiation",
+    goal: "Become recognized technology leader",
+    initiatives: [
+      "Launch Dentsu AI Studio",
+      "Deploy Global Technology Stack",
+      "Develop Proprietary IP & Tools",
+      "Strategic Technology Partnerships",
+    ],
+    impact: "€2M new revenue",
+  },
+  {
+    id: 3,
+    title: "Integration Excellence",
+    goal: "Complete 5-agency integration",
+    initiatives: [
+      "Operational Integration",
+      "Unified Client Service Model",
+      "One Dentsu Culture",
+      "Unified Brand & Market Presence",
+    ],
+    impact: "€3.2M margin improvement",
+  },
+  {
+    id: 4,
+    title: "Client Portfolio Optimization",
+    goal: "Focus on high-value Strategic Partners",
+    initiatives: [
+      "Client Profitability Analysis",
+      "Strategic Partner Program",
+      "Portfolio Pruning",
+      "New Client Acquisition",
+    ],
+    impact: "€4M margin improvement",
+  },
+  {
+    id: 5,
+    title: "Talent Excellence",
+    goal: "Exceptional team of 95 people",
+    initiatives: [
+      "Performance-Based Optimization",
+      "Compensation Overhaul",
+      "Skills Development & AI Training",
+      "Employer Brand Building",
+    ],
+    impact: "€1.8M margin improvement",
+  },
+];
