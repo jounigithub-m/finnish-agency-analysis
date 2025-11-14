@@ -39,6 +39,9 @@ jobs:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
         run: pnpm run build:frontend
 
+      - name: Create 404.html for GitHub Pages
+        run: cp dist/public/index.html dist/public/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
