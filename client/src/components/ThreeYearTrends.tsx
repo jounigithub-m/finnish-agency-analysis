@@ -2,6 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, TrendingDown, AlertCircle, CheckCircle2, XCircle } from "lucide-react";
 
+// Get base path for assets
+const basePath = import.meta.env.BASE_URL || "/";
+
 export function ThreeYearTrends() {
   const rankingChanges = [
     { agency: "Tulos Helsinki", change: "#14 → #3", trend: "up", highlight: true, description: "+11 positions, 52% GP growth" },
@@ -117,7 +120,7 @@ export function ThreeYearTrends() {
             </CardHeader>
             <CardContent>
               <img 
-                src="/chart_3year_gp_evolution.png" 
+                src={`${basePath}chart_3year_gp_evolution.png`}
                 alt="3-Year Gross Profit Evolution" 
                 className="w-full rounded-lg border"
               />
@@ -131,7 +134,7 @@ export function ThreeYearTrends() {
             </CardHeader>
             <CardContent>
               <img 
-                src="/chart_3year_margin_trends.png" 
+                src={`${basePath}chart_3year_margin_trends.png`}
                 alt="3-Year Margin Trends" 
                 className="w-full rounded-lg border"
               />
@@ -145,7 +148,7 @@ export function ThreeYearTrends() {
             </CardHeader>
             <CardContent>
               <img 
-                src="/chart_3year_ranking_changes.png" 
+                src={`${basePath}chart_3year_ranking_changes.png`}
                 alt="3-Year Ranking Changes" 
                 className="w-full rounded-lg border"
               />
@@ -159,7 +162,7 @@ export function ThreeYearTrends() {
             </CardHeader>
             <CardContent>
               <img 
-                src="/chart_efficiency_comparison_2024.png" 
+                src={`${basePath}chart_efficiency_comparison_2024.png`}
                 alt="Efficiency Comparison 2024" 
                 className="w-full rounded-lg border"
               />
@@ -202,7 +205,7 @@ export function ThreeYearTrends() {
             </div>
 
             <img 
-              src="/chart_dentsu_4year_deep_dive.png" 
+              src={`${basePath}chart_dentsu_4year_deep_dive.png`}
               alt="Dentsu 4-Year Deep Dive" 
               className="w-full rounded-lg border"
             />
