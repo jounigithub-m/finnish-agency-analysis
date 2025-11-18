@@ -8,6 +8,8 @@ import {
   DentsuProjectionChart,
   AgencyTypeDistribution 
 } from "@/components/Charts";
+import { ThreeYearTrends } from "@/components/ThreeYearTrends";
+import RisingAgencies from "@/components/RisingAgencies";
 import { 
   marketOverview, 
   top10Agencies, 
@@ -51,6 +53,15 @@ export default function Home() {
               </button>
               <button onClick={() => scrollToSection('competitive')} className="text-sm hover:text-primary transition-colors">
                 Competitive Landscape
+              </button>
+              <button onClick={() => scrollToSection('3year-trends')} className="text-sm hover:text-primary transition-colors">
+                3-Year Trends
+              </button>
+              <button onClick={() => scrollToSection('rising-agencies')} className="text-sm hover:text-primary transition-colors">
+                Rising Threats
+              </button>
+              <button onClick={() => scrollToSection('top3-swot')} className="text-sm hover:text-primary transition-colors">
+                Top 3 SWOT
               </button>
               <button onClick={() => scrollToSection('dentsu')} className="text-sm hover:text-primary transition-colors">
                 Dentsu Analysis
@@ -330,6 +341,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 3-Year Trends Analysis */}
+      <ThreeYearTrends />
+
+      {/* Rising Agencies Analysis */}
+      <RisingAgencies />
+
       {/* Tulos Helsinki Analysis */}
       <section className="py-20">
         <div className="container">
@@ -422,6 +439,359 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Top 3 Agencies SWOT */}
+      <section id="top3-swot" className="py-20 bg-background">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-center">Competitive Intelligence: Top 3 Agencies</h2>
+            <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
+              Detailed SWOT analysis of the three agencies ranking ahead of Dentsu Finland, 
+              revealing their competitive advantages and vulnerabilities.
+            </p>
+
+            {/* Miltton Finland */}
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Miltton Finland</h3>
+                  <p className="text-sm text-muted-foreground">€27.2M GP | 13% OP Margin | Communications & PR</p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="bg-green-50 border-green-200">
+                  <CardHeader>
+                    <CardTitle className="text-green-800">Strengths</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Market leader (#1 by gross profit)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Scale advantage: 265 employees</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> International presence (Nordics, Europe, USA)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Unique positioning: business + political expertise</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Consultancy model supports premium pricing</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Recognized as most innovative PR agency</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-red-50 border-red-200">
+                  <CardHeader>
+                    <CardTitle className="text-red-800">Weaknesses</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Employee satisfaction: 3.1/5 Glassdoor rating</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Modest growth: only 1% in 2024</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Lost 24 employees (retention issues)</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> 13% margin not exceptional vs competitors</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Complexity from multiple service lines</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-blue-50 border-blue-200">
+                  <CardHeader>
+                    <CardTitle className="text-blue-800">Opportunities</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Growing importance of ESG and stakeholder capitalism</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Crisis communications demand increasing</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> International expansion potential</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> AI integration for research and insights</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-orange-50 border-orange-200">
+                  <CardHeader>
+                    <CardTitle className="text-orange-800">Threats</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Talent retention challenges</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Market saturation in Finland</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Boutique firms competing on specialization</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> AI commoditizing some advisory services</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Dagmar */}
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Dagmar</h3>
+                  <p className="text-sm text-muted-foreground">€21.2M GP | 11% OP Margin | Media Agency</p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="bg-green-50 border-green-200">
+                  <CardHeader>
+                    <CardTitle className="text-green-800">Strengths</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Strong #2 position with 4% growth</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Leading media agency with strong buying power</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Data-driven approach with technology edge</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Part of Salomaa Group (largest in Finland)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Scale: 214 employees</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Added 14 employees (growth confidence)</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-red-50 border-red-200">
+                  <CardHeader>
+                    <CardTitle className="text-red-800">Weaknesses</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> 11% margin below industry leaders</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Media agency space commoditizing</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Success depends on maintaining tech edge</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Group structure may limit agility</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Heavy dependence on Finnish market</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-blue-50 border-blue-200">
+                  <CardHeader>
+                    <CardTitle className="text-blue-800">Opportunities</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Programmatic buying expansion</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> AI-powered media optimization</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Data monetization for insights services</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Nordic expansion opportunity</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> First-party data solutions (cookie-less future)</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-orange-50 border-orange-200">
+                  <CardHeader>
+                    <CardTitle className="text-orange-800">Threats</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Platform competition (Google, Meta direct buying)</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Media buying margins compressing</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> AI automating media planning</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Client in-housing trend</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Media budgets first to cut in downturn</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Tulos Helsinki */}
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Tulos Helsinki</h3>
+                  <p className="text-sm text-muted-foreground">€14.0M GP | 41% OP Margin | Technology-First Agency</p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="bg-green-50 border-green-200">
+                  <CardHeader>
+                    <CardTitle className="text-green-800">Strengths</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Exceptional 41% operating margin (6x average)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Explosive 53% growth (jumped from #14 to #3)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Automation leadership transforming agency model</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> €607k GP per employee (6x industry average)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Cutting-edge AI and analytics</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Lean: only 23 employees, minimal overhead</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-red-50 border-red-200">
+                  <CardHeader>
+                    <CardTitle className="text-red-800">Weaknesses</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Limited scale: 23 employees limits capacity</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Narrow focus on performance marketing</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Technology focus may limit creative capabilities</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Client dependency risk with small team</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Lower brand awareness vs traditional agencies</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Hard to find talent with tech + marketing skills</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-blue-50 border-blue-200">
+                  <CardHeader>
+                    <CardTitle className="text-blue-800">Opportunities</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Market education on automation value</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> International expansion (model scales globally)</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Platform development for other agencies</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Attractive acquisition target for networks</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Consulting services to teach methodology</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-orange-50 border-orange-200">
+                  <CardHeader>
+                    <CardTitle className="text-orange-800">Threats</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Competitors copying automation approach</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> AI and platform costs may increase</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Limited market of clients who fit model</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Tech companies competing for same talent</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Clients may bring automation in-house</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> AI regulations may constrain capabilities</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Dentsu Finland */}
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-warning flex items-center justify-center text-white font-bold">
+                  4
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Dentsu Finland</h3>
+                  <p className="text-sm text-muted-foreground">€13.8M GP | 8% OP Margin | Full-Service Agency</p>
+                </div>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="bg-green-50 border-green-200">
+                  <CardHeader>
+                    <CardTitle className="text-green-800">Strengths</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Global Dentsu network access (Merkle, M1, proprietary tech)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Successful consolidation recovery (+26% revenue 2024)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Diverse capabilities from 5-agency merger</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Strong media business (main growth driver)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> Improved ranking (#5 → #4)</li>
+                      <li className="flex gap-2"><span className="text-green-600">✓</span> International brand credibility</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-red-50 border-red-200">
+                  <CardHeader>
+                    <CardTitle className="text-red-800">Weaknesses</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Lowest operating margin in top 10 (8% vs 11-13% peers)</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Poor efficiency: €123k GP/employee (vs €607k Tulos)</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Unclear market positioning ("full-service" generic)</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Underutilizing global Dentsu technology assets</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Volatile profitability post-consolidation</li>
+                      <li className="flex gap-2"><span className="text-red-600">✗</span> Stuck in middle: neither premium nor efficient</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-blue-50 border-blue-200">
+                  <CardHeader>
+                    <CardTitle className="text-blue-800">Opportunities</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Leverage global Dentsu tech (unique in Finland)</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Hybrid model: consultancy + technology</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Outcome-based pricing enabled by analytics</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Complete integration to unlock €4M+ profit</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Nordic expansion using Finland as testbed</li>
+                      <li className="flex gap-2"><span className="text-blue-600">→</span> Win enterprise clients from Miltton with tech edge</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-orange-50 border-orange-200">
+                  <CardHeader>
+                    <CardTitle className="text-orange-800">Threats</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Margin trap: 8% insufficient to fund technology investments</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Talent exodus due to low margins/compensation</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Squeezed by premium agencies and efficient agencies</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Global parent may lose patience with underperformance</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Competitors copying automation (Tulos model spreading)</li>
+                      <li className="flex gap-2"><span className="text-orange-600">⚠</span> Market share loss to agile competitors (N2, etc.)</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="pt-6">
+                <h4 className="font-semibold mb-3">Competitive Comparison Summary</h4>
+                <div className="grid md:grid-cols-4 gap-4 text-sm">
+                  <div>
+                    <p className="font-semibold text-primary mb-1">Miltton (#1)</p>
+                    <p className="text-muted-foreground">Premium consultancy model, 13% margin, but growth stalling</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary mb-1">Dagmar (#2)</p>
+                    <p className="text-muted-foreground">Strong media capabilities, 11% margin, facing platform competition</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary mb-1">Tulos (#3)</p>
+                    <p className="text-muted-foreground">Automation leader, 41% margin, but limited scale and replicable</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-warning mb-1">Dentsu (#4)</p>
+                    <p className="text-muted-foreground">Global assets underutilized, 8% margin, needs clear positioning</p>
+                  </div>
+                </div>
+                <div className="mt-4 p-4 bg-background rounded-lg border">
+                  <p className="text-sm font-semibold mb-2">Strategic Insight:</p>
+                  <p className="text-sm text-muted-foreground">
+                    Dentsu is the only top-4 agency with access to enterprise-grade global technology (Merkle, M1, Dentsu AI). 
+                    By combining this unique asset with consultancy-level positioning, Dentsu can create a hybrid model that 
+                    neither Miltton (no tech) nor Tulos (no consultancy) can match. The path to #1 requires choosing this 
+                    differentiated positioning and executing margin improvement to 12%+ to fund the transformation.
+                  </p>
                 </div>
               </CardContent>
             </Card>
